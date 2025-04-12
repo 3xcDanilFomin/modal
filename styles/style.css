@@ -36,19 +36,31 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   inset: 0;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .modal-overlay.modal--open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
   width: 550px;
   background-color: #fff;
   border-radius: 12px;
+  opacity: 0;
+  transform: translateY(-32px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal--open .modal {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .modal__header {
@@ -84,7 +96,6 @@ body {
 
 .modal__content {
   padding: 12px 24px;
-  border-bottom: 1px solid #dee2e6;
 }
 
 .modal__content p {
