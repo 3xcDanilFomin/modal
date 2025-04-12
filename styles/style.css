@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.btn-open {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-open:hover {
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.modal--open {
+  display: flex;
+}
+
+.modal {
+  width: 550px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.modal__header {
+  padding: 12px 24px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #212529;
+}
+
+.modal__btn-close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__btn-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #212529;
+  transition: stroke 0.2s ease-in-out;
+}
+
+.modal__btn-icon:hover {
+  stroke: rgb(149, 1, 1);
+}
+
+.modal__content {
+  padding: 12px 24px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal__content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #494848;
+}
+
+.modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px 24px;
+}
+
+.modal__btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.modal__btn--cancel {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.modal__btn--cancel:hover {
+  background-color: #5c636a;
+}
+
+.modal__btn--confirm {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.modal__btn--confirm:hover {
+  background-color: #0b5ed7;
+}

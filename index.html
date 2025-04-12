@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <button class="btn-open">Open modal</button>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <header class="modal__header">
+          <h2 class="modal__title">Title</h2>
+          <button class="modal__btn-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="modal__btn-icon"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </header>
+        <div class="modal__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+            rem porro deserunt dicta non? Laboriosam, tempore veniam alias, id
+            excepturi pariatur officiis sapiente ab optio reiciendis molestiae
+            eius suscipit esse.
+          </p>
+        </div>
+        <footer class="modal__footer">
+          <button class="modal__btn modal__btn--cancel">Cancel</button>
+          <button class="modal__btn modal__btn--confirm">Confirm</button>
+        </footer>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
